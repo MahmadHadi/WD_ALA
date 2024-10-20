@@ -16,6 +16,9 @@
             }
             body {
                 background: #333;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             .cursor {
                 background: #fff;
@@ -27,13 +30,24 @@
                 transition: all 0.3s linear;
                 pointer-events: none;
             }
+            .heading {
+                font-size: 5rem;
+                font-family: sans-serif;
+                color: white;
+                text-transform: capitalize;
+                pointer-events: none;
+                transition: all 0.3s linear;
+            }
         </style>
     </head>
     <body>
         <div class="cursor"></div>
 
+        <div class="heading">move the cursor</div>
+
         <script>
             const cursor = document.querySelector(".cursor");
+            const heading = document.querySelector(".heading");
             const body = document.querySelector("body");
 
             body.addEventListener("mousemove", (e) => {
@@ -44,6 +58,7 @@
                 const randomColor =
                     "#" + Math.floor(Math.random() * 16777215).toString(16);
                 cursor.style.background = randomColor;
+                heading.style.color = randomColor;
             });
         </script>
     </body>
