@@ -9,6 +9,18 @@
     <body>
         <div class="cursor"></div>
         <div class="container">
+            <div class="theme-toggle | row">
+                <div class="left">
+                    <img
+                        class="theme-img"
+                        src="../Images/moon.svg"
+                        alt="Dark Theme"
+                    />
+                </div>
+                <div class="right">
+                    <span class="theme-text">Dark</span> Theme
+                </div>
+            </div>
             <div class="row">
                 <div class="left">
                     <a target="_blank" href="./output_1.png">output image 1</a>
@@ -37,10 +49,27 @@
         <script>
             const cursor = document.querySelector(".cursor");
             const body = document.querySelector("body");
+            const root = document.querySelector(":root");
+            const themeImg = document.querySelector(".theme-img");
+            const themeText = document.querySelector(".theme-text");
+            const themeToggler = document.querySelector(".theme-toggle");
 
+            let isDark = true
             body.addEventListener("mousemove", (e) => {
                 cursor.style.top = e.clientY + "px";
                 cursor.style.left = e.clientX + "px";
+            });
+            themeToggler.addEventListener("click", () => {
+                root.style.setProperty("--dark", `${isDark ? "#fff" : "#333"}`);
+                root.style.setProperty(
+                    "--light",
+                    `${isDark ? "#333" : "#fff"}`
+                );
+                themeImg.src = isDark
+                    ? "../Images/sun.svg"
+                    : "../Images/moon.svg";
+                themeText.innerHTML = isDark ? "Light" : "Dark";
+                isDark = !isDark;
             });
         </script>
     </body>
