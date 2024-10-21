@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="../style.css" />
     </head>
     <body>
+        <div class="cursor"></div>
         <div class="container">
             <div class="row">
                 <div class="left">
@@ -33,5 +34,14 @@
                 </div>
             </div>
         </div>
+        <script>
+            const cursor = document.querySelector(".cursor");
+            const body = document.querySelector("body");
+
+            body.addEventListener("mousemove", (e) => {
+                cursor.style.top = e.clientY + "px";
+                cursor.style.left = e.clientX + "px";
+            });
+        </script>
     </body>
 </html>
