@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --clr-primary-orange: hsl(25, 97%, 53%);
+
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --clr-neutral-light-grey: hsl(217, 12%, 63%);
+    --clr-neutral-medium-grey: hsl(216, 12%, 54%);
+    --clr-neutral-dark-blue: hsl(213, 19%, 18%);
+    --clr-neutral-very-dark-blue: hsl(216, 12%, 8%);
+
+    --fs-para: 0.75rem;
+    --fs-primary-normal: 1rem;
+    --fs-heading: 1.5rem;
+
+    --fw-primary-para: 100;
+    --fw-primary-heading: 700;
+
+    --ff-primary: "Overpass", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.5;
+    font-family: var(--ff-primary);
+    height: 100vh;
+    color: var(--clr-neutral-white);
+}
+img,
+svg,
+picture {
+    max-width: 100%;
+    display: block;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style: none;
+}
+
+/* * cursor */
+.cursor {
+    background: #fff;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s linear;
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+/* * utility classes */
+.body-bgc {
+    background: var(--clr-neutral-very-dark-blue);
+}
+.card-bgc {
+    background: var(--clr-neutral-dark-blue);
+}
+.btn-bgc {
+    background: var(--clr-neutral-very-dark-blue);
+}
+.submit-bgc {
+    background: var(--clr-primary-orange);
+    transition: background 0.5s ease, color 0.5s ease;
+}
+.submit-bgc:hover {
+    background: var(--clr-neutral-white);
+    color: var(--clr-primary-orange);
+}
+.clr-white {
+    color: white;
+}
+.clr-orange {
+    color: var(--clr-primary-orange);
+}
+.btn-padding {
+    padding: 0.5rem 1rem;
+}
+.border-radius-50p {
+    border-radius: 50%;
+}
+.border-radius-20px {
+    border-radius: 20px;
+}
+.submit-padding {
+    padding: 0.2rem 0;
+}
+.padding {
+    padding: 2rem;
+}
+.d-flex-full {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.d-flex {
+    display: flex;
+}
+.align-center {
+    align-items: center;
+}
+.justify-content-space-evenly {
+    justify-content: space-evenly;
+}
+.margin-top-bottom {
+    margin: 1rem 0;
+}
+.d-inline {
+    display: inline;
+}
+.fs-primary-heading {
+    font-size: var(--fs-heading);
+}
+.fs-primary-para {
+    font-size: var(--fs-primary-normal);
+}
+.fs-para {
+    font-size: var(--fs-para);
+}
+.fw-primary-heading {
+    font-weight: var(--fw-primary-heading);
+}
+.fw-primary-light {
+    font-weight: var(--fw-primary-para);
+}
+.w-100p {
+    width: 100%;
+}
+.top {
+    width: fit-content;
+    padding: 1rem 1rem;
+}
+.border-none {
+    border: none;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.w-100p {
+    width: 100%;
+}
+.select-padding {
+    padding: 0.5rem 0.5rem;
+}
+.flex-direction-col {
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    width: 30vmax;
+    border-radius: 50px;
+}
+.d-none {
+    display: none !important;
+}
+
+.btn-rates {
+    transition: background 0.5s ease;
+}
+.btn-rates:hover {
+    background: var(--clr-neutral-light-grey);
+}
+.btn-rates:active {
+    background: var(--clr-primary-orange);
+}

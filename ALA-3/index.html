@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="body-bgc d-flex-full">
+        <div class="cursor"></div>
+        <div class="container card-bgc padding" id="rate">
+            <div
+                class="top btn-padding border-radius-50p btn-bgc margin-top-bottom"
+            >
+                <img src="images/icon-star.svg" alt="star icon " />
+            </div>
+
+            <h1 class="margin-top-bottom fs-primary-heading fw-primary-heading">
+                How did we do?
+            </h1>
+            <p class="fs-primary-para fw-primary-light">
+                Please let us know how we did with your support request. All
+                feedback is appreciated to help us improve our offering!
+            </p>
+            <div
+                class="btn-collection d-flex aling-center justify-content-space-evenly margin-top-bottom"
+            >
+                <button
+                    class="border-none clr-white btn-padding border-radius-50p btn-bgc btn-rates cursor-pointer"
+                    onclick="updateRate(1);"
+                >
+                    1
+                </button>
+                <button
+                    class="border-none clr-white btn-padding border-radius-50p btn-bgc btn-rates cursor-pointer"
+                    onclick="updateRate(2);"
+                >
+                    2
+                </button>
+                <button
+                    class="border-none clr-white btn-padding border-radius-50p btn-bgc btn-rates cursor-pointer"
+                    onclick="updateRate(3);"
+                >
+                    3
+                </button>
+                <button
+                    class="border-none clr-white btn-padding border-radius-50p btn-bgc btn-rates cursor-pointer"
+                    onclick="updateRate(4);"
+                >
+                    4
+                </button>
+                <button
+                    class="border-none clr-white btn-padding border-radius-50p btn-bgc btn-rates cursor-pointer"
+                    onclick="updateRate(5);"
+                >
+                    5
+                </button>
+            </div>
+            <div class="submit">
+                <button
+                    class="w-100p border-radius-20px submit-padding submit-bgc clr-white border-none cursor-pointer"
+                    onclick="getRate();"
+                >
+                    SUBMIT
+                </button>
+            </div>
+        </div>
+
+        <div
+            class="container card-bgc padding d-flex flex-direction-col"
+            id="thank-you"
+        >
+            <div class="top btn-padding border-radius-50p margin-top-bottom">
+                <img
+                    src="images/illustration-thank-you.svg"
+                    alt="thanks for ratting"
+                />
+            </div>
+
+            <div
+                class="select btn-bgc select-padding border-radius-20px clr-orange"
+                id="selected"
+                style="width: fit-content"
+            ></div>
+            <h1 class="margin-top-bottom fs-primary-heading fw-primary-heading">
+                Thank you!
+            </h1>
+            <p class="fw-primary-light">
+                We appreciate you taking the time to give a rating. If you ever
+                need more support, don't hesitate to get in touch!
+            </p>
+        </div>
+
+        <script src="getRate.js"></script>
+    </body>
+</html>
